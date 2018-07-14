@@ -66,7 +66,7 @@ In the paper, the filter sizes start at 32 and increase in each layer by a facto
 
 ##### Hyper-parameters
 
-I used 8 workers to fully utilize the power of Intel i7 processor cores. On my Laptop, when I used batch size of 64, 50 I was getting "ResourceExhaustedError : OOM when allocating tensor with shape.." error. I was able to resolve it after reducing the batch size down to 40. For the learning rate I started at 0.01 and go down by 0.001 each time. Every time I tried to go below 0.001 but did not see an increase in final score.
+I used 10 workers to fully utilize the power of Intel i7 processor cores. On my Laptop, when I used batch size of 64, 50 I was getting "ResourceExhaustedError : OOM when allocating tensor with shape.." error. I was able to resolve it after reducing the batch size down to 40. For the learning rate I started at 0.01 and go down by 0.001 each time. Every time I tried to go below 0.001 but did not see an increase in final score.
 
 After sample testing hyper-parameters, values were chosen that accounted for the network limitations performance requirements and a more extensive training run was performed.
 
