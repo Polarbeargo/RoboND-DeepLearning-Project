@@ -46,14 +46,14 @@ Each decoder block upsamples the input data, doubling the height and width of th
  * Some (one or two) additional separable convolution layers to extract some more spatial information from prior layers. The code for the decoder block can be found in the task block six of the `model_training.ipynb` notebook.   
 Each *Decoder Block* architecture is shown below. Note all separable convolutions use 'same' padding and are followed by batch normalisation. 
     
-![](./image/Transpose convolution.png)    
+![](./image/Transpose_convolution.png)    
     
 
 ##### Skip connections
 
 Skip connections are used to help retain spatial information of the input data.
 
-![](./image/Skip Connections.png)    
+![](./image/Skip_Connections.png)    
 
 #### 2. Explain the neural network parameters including the values selected and how these values were obtained.
 
@@ -171,6 +171,7 @@ The final result is calculated by the average IoU of correct hero identification
 
 ### Simulation
 
-#### 1. The vehicle must successfully drive a lap around the track. No tire may leave the drivable portion of the track surface. The car may not pop up onto ledges or roll over any surfaces that would otherwise be considered unsafe (if humans were in the vehicle).
+#### 1. The vehicle must successfully drive a lap around the track. No tire may leave the drivable portion of the track surface. The car may not pop up onto ledges or roll over any surfaces that would otherwise be considered unsafe (if humans were in the vehicle).   
 
+Youtube Demo:
 [![Youtube Demo:](https://img.youtube.com/vi/8uRiiSYJZGA/0.jpg)](https://youtu.be/8uRiiSYJZGA) 
