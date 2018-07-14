@@ -28,7 +28,8 @@ The encoder portion is a convolution network that reduces to a deeper 1x1 convol
 
 ![](./image/1x1convolution.png)
 
-######Separable Convolutions
+######Separable Convolutions    
+
 Separable Convolutions is a technique that reduces the number of parameters needed, thus increasing efficiency for the encoder network. Each includes batch normalization with the ReLU activation function applied to the layers.
 The code for the encoder block can be found in the cell four and five of the `model_training.ipynb` notebook.
 
