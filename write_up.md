@@ -173,4 +173,4 @@ The final result is calculated by the average IoU of correct hero identification
 
 #### 1. The vehicle must successfully drive a lap around the track. No tire may leave the drivable portion of the track surface. The car may not pop up onto ledges or roll over any surfaces that would otherwise be considered unsafe (if humans were in the vehicle).
 
-[![Youtube Demo:](https://img.youtube.com/vi/28uRiiSYJZGA/0.jpg)](https://youtu.be/8uRiiSYJZGA) 
+[![Youtube Demo:](https://img.youtube.com/vi/8uRiiSYJZGA/0.jpg)](https://youtu.be/8uRiiSYJZGA) 
