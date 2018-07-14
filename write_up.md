@@ -60,14 +60,13 @@ Skip connections are used to help retain spatial information of the input data.
 ##### Model parameters
 
 The model parameters like network depth, kernel's and stride sizes were derived from this paper [Xception: Deep Learning with Depthwise Separable Convolutions](https://arxiv.org/abs/1610.02357)
- 
-In the above paper, the only segmentation convolution kernel size used was a 3x3. As the papers have both had extensive research performed on the model, the Quadsim model would also use kernel size of 3x3.
+In this paper, the segmentation convolution kernel size used was 3x3. As the papers have both had extensive research performed on the model, my model would also use kernel size of 3x3.
 
 In the paper, the filter sizes start at 32 and increase in each layer by a factor of either four or two based on the previous filter count. However, as the simulator environment is not detail-rich, a filter size of 16 was chosen and with an increase factor of two used between layers.
 
 ##### Hyper-parameters
 
-I used 8 workers to fully utilize the power of Intel i7 processor cores. On my Laptop, when I used batch size of 64, 50 I was getting "ResourceExhaustedError : OOM when allocating tensor with shape.." error. I was able to resolve it after reducing the batch size down to 40. For the learning rate I started at 0.01 and go down by 0.001 each time. Every time I tried to go below 0.001 I did not see an increase in final score.
+I used 8 workers to fully utilize the power of Intel i7 processor cores. On my Laptop, when I used batch size of 64, 50 I was getting "ResourceExhaustedError : OOM when allocating tensor with shape.." error. I was able to resolve it after reducing the batch size down to 40. For the learning rate I started at 0.01 and go down by 0.001 each time. Every time I tried to go below 0.001 but did not see an increase in final score.
 
 After sample testing hyper-parameters, values were chosen that accounted for the network limitations performance requirements and a more extensive training run was performed.
 
@@ -108,7 +107,7 @@ The trained model, `model_weights`, can be found in the folder `data/weights/`.
 To run the model in the simulator, navigate to the repositories location and into the folder `code/` and run the `follow.py` file with the weights file as the argument.
 
 ```sh
-python3 follower.py model_weights
+python follower.py model_weights
 ```
 
 #### 2. The neural network obtains an accuracy greater than or equal to 40% (0.40) using the Intersection over Union (IoU) metric.
@@ -173,5 +172,4 @@ The final result is calculated by the average IoU of correct hero identification
 
 #### 1. The vehicle must successfully drive a lap around the track. No tire may leave the drivable portion of the track surface. The car may not pop up onto ledges or roll over any surfaces that would otherwise be considered unsafe (if humans were in the vehicle).   
 
-Youtube Demo:
 [![Youtube Demo:](https://img.youtube.com/vi/8uRiiSYJZGA/0.jpg)](https://youtu.be/8uRiiSYJZGA) 
