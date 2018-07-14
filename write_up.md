@@ -17,7 +17,7 @@ The semantic segmentation network architecture was constructed by the encoder bl
 | 1 x 1 layer | 20 * 20 | 128 |
 | decoder 1 | 40 * 40 | 128 |
 | decoder 2 | 80 * 80 | 64 |
-| decoder 3 | 160 * 160 | 128 |
+| decoder 3 | 160 * 160 | 32 |
 
 ##### Encoder
 
